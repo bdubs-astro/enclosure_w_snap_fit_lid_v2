@@ -20,15 +20,11 @@ I created an Autodesk Fusion design for a generic enclosure with a snap-fit lid.
 
 ## License
 
----
-
 This project is licensed under **CC BY-NC-SA 4.0**.
 
 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Design overview
-
----
 
 This parametric enclosure consists of an open-top box and a removable snap-fit lid. A continuous shallow locating rim aligns the lid with the box and supports its perimeter. Four tapered snap tabs, two on each long side, engage matching grooves to retain the lid. The short ends have no tabs, leaving room for connectors and other internal hardware.
 
@@ -41,8 +37,6 @@ There are two beveled notches in the underside of the lid, midway between the ta
 In the example shown above, the overall dimensions are **110 × 60 × 30 mm** (box length × width × height, excluding the lid), with **2 mm walls** and a **2 mm-thick lid**. The locating rim is **2 mm wide and 2 mm deep**. Tab roots are **2 mm thick**, tapering to **1.25 mm tips**, with **1 mm inside rim and tab-root fillets**. Each tab is **13.75 mm wide**, with centers **27.5 and 82.5 mm** along each long side.
 
 ## ⚙️ Box dimensions and edge radii
-
----
 
 ### `length`
 
@@ -101,8 +95,6 @@ Current value: **3 mm**. Rounds the vertical outside corners of both the box and
 Current value: **0.25 mm**. Anti-elephant-foot chamfer parameter used by Chamfer1. Inspect the selected edges in Fusion when changing it; it is separate from the pick-entry bevels.
 
 ## Lid fit and locating rim
-
----
 
 ### `lid_gap`
 
@@ -170,8 +162,6 @@ Current value: **1 mm**. Continuous fillet around the inside rim-to-lid-plate ju
 
 ## Four long-side snaps
 
----
-
 ### `snap_offset`
 
 ```text
@@ -230,8 +220,6 @@ Current value: **1 mm**. Fillets at both ends of each tab where it emerges from 
 
 ## Beveled pick-entry notches
 
----
-
 ### `pry_width`
 
 ```text
@@ -258,8 +246,6 @@ Current value: **2 mm**. Distance the bevel extends inward from the outside lid 
 
 ## 🔧 Opening and closing the lid
 
----
-
 To close, align the locating rim with the cavity and engage the four snaps progressively. The lid plate is intended to seat on the box rim with no nominal vertical seam gap. 
 
 ⚠️Do not attempt to force a snap requiring excessive pressure.
@@ -274,7 +260,6 @@ To open:
 The bevel identifies the insertion point and provides a sloping entry instead of requiring the tool to be forced into an unrelieved edge. It does not guarantee that excessive prying force cannot damage the printed part.
 
 ## Full-size testing and model bodies
----
 
 The model contains two bodies:
 
@@ -288,8 +273,6 @@ Print the box and lid from the same set of parameter values so their beads and g
 
 ## 🖨️ Printing
 
----
-
 Material: **PETG**.
 
 - **Box:** bottom flat on the bed, opening upward.
@@ -301,8 +284,6 @@ Material: **PETG**.
 CAD regeneration does not establish printed layer strength. The wide rim, full-thickness roots, taper and fillets support the tab-to-rim junctions, but physical testing is required. Inspect roots for cracking, whitening or permanent bending during testing.
 
 ## 💡Adjustment guide
-
----
 
 | Symptom | Controls to consider |
 |---|---|
@@ -318,8 +299,6 @@ CAD regeneration does not establish printed layer strength. The wide rim, full-t
 Changing `wall_thickness` scales several linked features together. For fit tuning, change the relevant individual parameter rather than unintentionally scaling the whole closure.
 
 ## ✅ Parameter safeguards and user verification
-
----
 
 **⚠️ The user must verify parameter combinations after edits.** Creation-script checks do not run automatically when parameters are edited in Fusion. The model has no automatic parameter-validation routine.
 
